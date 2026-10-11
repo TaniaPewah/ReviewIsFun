@@ -1,0 +1,11 @@
+.git/**
+.reviewquest-local/**
+src/**
+tests/**
+scripts/**
+tsconfig.json
+DECISIONS.md
+SPEC.md
+media/**
+node_modules/.cache/**
+**/*.map

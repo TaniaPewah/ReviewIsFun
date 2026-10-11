@@ -1,0 +1,81 @@
+{
+  "name": "reviewquest",
+  "displayName": "ReviewQuest",
+  "description": "Learn a commit one decision at a time, with comprehension checkpoints and joyful rewards.",
+  "version": "0.1.0",
+  "publisher": "taniapewah",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.95.0",
+    "node": ">=20"
+  },
+  "categories": [
+    "Education",
+    "Other"
+  ],
+  "main": "./dist/extension.cjs",
+  "activationEvents": [
+    "onCommand:reviewquest.reviewLatest",
+    "onCommand:reviewquest.selectCommit"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "reviewquest.reviewLatest",
+        "title": "ReviewQuest: Review Latest Commit"
+      },
+      {
+        "command": "reviewquest.selectCommit",
+        "title": "ReviewQuest: Choose a Commit"
+      }
+    ],
+    "configuration": {
+      "title": "ReviewQuest",
+      "properties": {
+        "reviewquest.codexPath": {
+          "type": "string",
+          "default": "",
+          "description": "Optional full path to an authenticated Codex CLI. Leave empty to use the SDK's bundled CLI."
+        },
+        "reviewquest.model": {
+          "type": "string",
+          "default": "",
+          "description": "Optional Codex model override. Leave empty to use the account's default."
+        },
+        "reviewquest.reducedMotion": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable celebration motion."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "check": "npm run typecheck && npm test && npm run build",
+    "package": "npm run build && vsce package --allow-missing-repository --skip-license",
+    "vscode:prepublish": "npm run build"
+  },
+  "dependencies": {
+    "@openai/codex-sdk": "0.162.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@types/vscode": "1.95.0",
+    "@vscode/vsce": "4.0.0",
+    "esbuild": "0.28.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "typescript": "5.9.3",
+    "vitest": "5.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaniaPewah/ReviewIsFun.git"
+  }
+}
