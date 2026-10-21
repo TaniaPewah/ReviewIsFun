@@ -8,7 +8,7 @@ A new project requested by TaniaPewah. Planning documents, local scaffolding, co
 
 Choose a commit → inspect a small real code change → understand the decision and alternatives → answer one question → get feedback and XP → celebrate → choose to continue.
 
-The agreed experience is one technical decision per guided review highlight, with notifications after commits and control over when to start. It should feel like reviewing code together. Understanding-check, scoring, and progression details remain proposals to discuss.
+The agreed experience is one technical decision per guided review highlight, with a notification after a real new commit and an explicit Start. Scoring, the one follow-up, Skip, and XP are agreed in A16–A18. It should feel like reviewing code together.
 
 ## Proposed first version
 
@@ -19,7 +19,7 @@ Read [SPEC.md](SPEC.md) for the product flow and acceptance criteria, and [DECIS
 ## Current status
 
 - A local Git repository has been initialized on `main`.
-- Product and architecture proposals are ready for consultation.
+- A13–A23 are agreed in the architecture and decision documents. Exclusion patterns, excerpt sizes, prompt wording, and numerical context budgets remain open. Implementation has not started from those choices.
 - Some scaffolding and core/Git prototype code were started before all dependent choices were consulted. That work is paused and does not imply approval of its architecture. Packages and one cosmic celebration image are present; no credential values were added or copied.
 - The owner selected the existing public repository [TaniaPewah/ReviewIsFun](https://github.com/TaniaPewah/ReviewIsFun). Its existing MIT license is preserved. ReviewQuest remains the extension's working name.
 - TypeScript checking and all 37 core/Git prototype tests passed for this checkpoint. The extension, UI, and live model connection have not been validated end to end.
